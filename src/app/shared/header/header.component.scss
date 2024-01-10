@@ -1,0 +1,21 @@
+@media all and (min-width: 992px) {
+  .dropdown-menu {
+    position: relative;
+    width: 60vw;
+    margin: auto;
+  }
+  ul.no-bullets {
+    list-style-type: none;
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu {
+      max-height: 200px;
+      overflow-y: scroll;
+  }
+}
+.dropdown-menu{
+  background-color: #3C6EFD;
+  border: 0;
+  color: var(--bs-nav-link-color);
+}

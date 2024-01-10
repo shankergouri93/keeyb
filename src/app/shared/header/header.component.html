@@ -1,0 +1,42 @@
+<!-- Menu -->
+<div class="bg-primary">
+  <div class="container">
+     <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <!-- Nav Toggle Button -->
+        <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" 
+           aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center lh-lg" id="main_nav">
+           <ul class="navbar-nav p-3 p-md-0" >
+              <!-- Mega Menu -->
+              <li class="nav-item dropdown has-megamenu" *ngFor="let item of menu">
+                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> {{ item.name }}  </a>
+                 <!-- Mega Menu -->
+                 <div class="dropdown-menu mega-menu p-3 container menu" *ngIf="item.subMenuItems" role="menu">
+                    <!-- <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </span> -->
+                    <span class="row">
+                      <span class="col-md-4" *ngFor="let sub of item.subMenuItems">
+                        <b><u>{{ sub.name }}</u></b>
+                        <ul *ngIf="sub.subMenuItems" style="list-style-type: none;">
+                           <li *ngFor="let ssub of sub.subMenuItems">
+                              {{ssub.name}}
+                           </li>
+                         </ul>
+                      </span>
+                     
+                    </span>
+                    <ul>
+                    </ul>
+                 </div>
+              </li>
+              
+           </ul>
+        </div>
+     </nav>
+  </div>
+</div>
+<!-- Ends -->
